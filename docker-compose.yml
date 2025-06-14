@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: crush-app
+    ports:
+      - "8080:8080"
+    environment:
+      - CLOUD_NAME=dx0iztung
+      - CLOUD_API_KEY=683657581798737
+      - CLOUD_API_SECRET=qdSA3zd5xaJXnfYMezV1AKH3-L4
+      - MAP_TOKEN=pk.eyJ1Ijoic29taWxyYXRob3JlIiwiYSI6ImNtMDc1MnljcDB6bXIya3Iwd3RrcTZ6M2wifQ.WMw0UiPr9h9V0hWXNDcn3g
+      - ATLASDB_URL=mongodb+srv://somilRathore:794GzYGIIeGyBhx2@cluster0.xvbeq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - SECRET=mysupersecretCode
+      - NODE_ENV=production
+    volumes:
+      - .:/app
+    restart: unless-stopped

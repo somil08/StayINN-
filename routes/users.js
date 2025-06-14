@@ -21,8 +21,4 @@ router.post("/login",
 );
 
 router.get("/logout", userController.logout);
-<<<<<<< HEAD
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> b0d1ccb (Add Project Files)

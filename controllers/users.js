@@ -17,11 +17,7 @@ module.exports.signup = async (req, res) => {
         res.redirect("/listings");
       });
     } catch (e) {
-<<<<<<< HEAD
       req.flash("error", e.message); 
-=======
-      req.flash("error", e.message);
->>>>>>> b0d1ccb (Add Project Files)
       res.redirect("/signup");
     }
   }

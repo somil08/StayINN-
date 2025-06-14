@@ -1,10 +1,3 @@
-
-<<<<<<< HEAD
-
-
-=======
-const { ref } = require("joi");
->>>>>>> b0d1ccb (Add Project Files)
 const mongoose = require("mongoose");
 const Review = require("./review.js")
 const Schema = mongoose.Schema;

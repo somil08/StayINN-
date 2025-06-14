@@ -7,21 +7,12 @@ const app = express();
 const port = 8080; 
 const path = require("path");
 const methodOverride = require("method-override");
-<<<<<<< HEAD
-const ejsMate = require("ejs-mate"); 
-const ExpressError = require("./utils/ExpressError.js");
-const session = require("express-session");  
-const MongoStore = require('connect-mongo');
-const flash = require("connect-flash");
-const passport = require("passport"); 
-=======
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 const passport = require("passport");
->>>>>>> b0d1ccb (Add Project Files)
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
@@ -48,21 +39,12 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-<<<<<<< HEAD
-app.engine("ejs", ejsMate); 
+app.engine("ejs",ejsMate);
 
  const store = MongoStore.create({
   mongoUrl:Db_url,
   crypto:{
     secret:process.env.SECRET
-=======
-app.engine("ejs", ejsMate);
-
- const store = MongoStore.create({
-  mongoUrl:Db_url,
-  crypto:{  
-    secret:process.env.SECRET,
->>>>>>> b0d1ccb (Add Project Files)
   },
   touchAfter:24*3600,
 })
@@ -112,11 +94,7 @@ app.get("/location",async(req,res)=>{
   let { location } = req.query;
   console.log(location);
   const listings = await Listing.find({ location: `${location}` })
-<<<<<<< HEAD
 // console.log(listings);
-=======
-console.log(listings);
->>>>>>> b0d1ccb (Add Project Files)
       // const title = listings[0].title;
       // const price = listings[0].price;
       // // Do something with this data
